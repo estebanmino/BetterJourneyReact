@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {Nav} from 'react-bootstrap';
+import {Nav, NavItem} from 'react-bootstrap';
 
 class Sidebar extends Component {
   render() {
@@ -8,9 +8,15 @@ class Sidebar extends Component {
       <div className='navbar'>
         <div className='container'>
           <Nav >
-            <NavLink exact to="/messaging">Messaging</NavLink>
-            <NavLink exact to="/clients">Cients</NavLink>
-            <NavLink exact to="/journey">Journey</NavLink>
+            <NavItem>
+              <NavLink exact to="/messaging">Messaging</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink exact to="/clients">Cients</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink exact to="/journey">Journey</NavLink>
+            </NavItem>
           </Nav>
         </div>
       </div>

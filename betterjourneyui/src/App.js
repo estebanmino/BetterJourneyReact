@@ -16,33 +16,39 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div>
-      <Header/>
-      <Sidebar/>
-          <Switch>
-            <Route exact path="/" render={props => 
-              <Home {...props} />
-            }
-          /> 
+        <div className="wrapper">
+          <div className="sidebar" >    
+            <Sidebar/>
+          </div>
+          <div className="content" >    
+            <Header/>
 
-          <Route exact path="/messaging" render={props => 
-              <Messenger {...props}
-              />
-            }/>  
-            <Route exact path="/clients" render={props => 
-              <Journey {...props} 
-              />
-            }/>  
+            <Switch>
+              <Route exact path="/" render={props => 
+                <Home {...props} />
+                }
+              /> 
 
-            <Route exact path="/journey" render={props => 
-              <Clients {...props} 
-              />
-            }/>  
+              <Route exact path="/messaging" render={props => 
+                  <Messenger {...props}
+                  />
+                }/>  
+                
+              <Route exact path="/clients" render={props => 
+                <Journey {...props} 
+                />
+              }/>  
 
-            <Route component={NotFound}/>
-          </Switch>
+              <Route exact path="/journey" render={props => 
+                <Clients {...props} 
+                />
+              }/>  
 
-      </div>
+              <Route component={NotFound}/>
+            </Switch>
+
+          </div>
+        </div>
       </BrowserRouter>
     );
   }
