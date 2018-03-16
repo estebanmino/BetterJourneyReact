@@ -1,0 +1,29 @@
+{
+    "total": 4,
+    "entries": [
+        {   
+            "chatroomId": 0,
+            "message": "First message",
+            "sender": 0,
+            "timestamp": 1521243895
+        },
+        {   
+            "chatroomId": 0,
+            "message": "Second message",
+            "sender": 0,
+            "timestamp": 1521243895
+        },
+        {   
+            "chatroomId": 1,
+            "message": "Third message",
+            "sender": 0,
+            "timestamp": 1521243895            
+        },
+        {   
+            "chatroomId": 1,
+            "message": "Third message",
+            "sender": 0,
+            "timestamp": 1521243895            
+        }
+    ]
+}

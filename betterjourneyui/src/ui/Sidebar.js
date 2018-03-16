@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import {Nav, NavItem} from 'react-bootstrap';
+import Icon from '../icon.PNG';
 
 class Sidebar extends Component {
   render() {
@@ -9,13 +10,26 @@ class Sidebar extends Component {
         <div className='container'>
           <Nav >
             <NavItem>
-              <NavLink exact to="/messaging">Messaging</NavLink>
+              <NavLink exact to="/messaging">
+              <div className="card sidebar-card">
+                  Messaging
+                </div>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink exact to="/clients">Cients</NavLink>
+              <NavLink exact to="/clients">
+                <div className="card sidebar-card">
+                  Cients
+                </div>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink exact to="/journey">Journey</NavLink>
+              <NavLink exact to="/journey">
+              <div className="card sidebar-card">
+                Journey
+              </div>  
+              </NavLink>
+
             </NavItem>
           </Nav>
         </div>

@@ -12,7 +12,20 @@ import Messenger from './components/messenger/Messenger';
 import Journey from './components/journey/Journey';
 import Clients from './components/clients/Clients';
 
+import usersData from './data/users.json'
+import chatroomsData from './data/chatroomsData.json'
+import chatroomData from './data/chatroomData.json'
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users = usersData['entries'],
+      chatroomData = chatroomData['entries'],
+      chatroomsData = chatroomsData['entries'],
+    }
+  }
+  
   render() {
     return (
       <BrowserRouter>
@@ -30,7 +43,7 @@ class App extends Component {
               /> 
 
               <Route exact path="/messaging" render={props => 
-                  <Messenger {...props}
+                  <Messenger {...props} users={this.users} chatroomData={this.chatroomData} chatroomsData={chatroomsData}
                   />
                 }/>  
                 
