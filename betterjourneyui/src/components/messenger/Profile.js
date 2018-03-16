@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Profile extends Component {
   render() {
     return (
-      <div className="Profile">
+      <div className="messenger-component profile">
+        <h2>Profile</h2>
       </div>
     );
   }

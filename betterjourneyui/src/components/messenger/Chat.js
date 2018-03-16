@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Chat extends Component {
   render() {
     return (
-      <div className="Chat">
+      <div className="messenger-component Chat border border-primary">
+        <h2>Chat</h2>
       </div>
     );
   }
