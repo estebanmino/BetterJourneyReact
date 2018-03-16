@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Sidebar extends Component {
+class Journey extends Component {
   render() {
     return (
-      <div className="Sidebar">
+      <div className="Journey">
       </div>
     );
   }
 }
 
-export default Sidebar;
+export default Journey;
