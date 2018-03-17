@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 
 class Chat extends Component {
   constructor(props) {
-    super(props),
+    super(props)
     this.state = { 
 
     }

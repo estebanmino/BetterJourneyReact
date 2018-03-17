@@ -13,17 +13,27 @@ import Journey from './components/journey/Journey';
 import Clients from './components/clients/Clients';
 
 import usersData from './data/users.json'
-import chatroomsData from './data/chatroomsData.json'
-import chatroomData from './data/chatroomData.json'
+import chatRoomsData from './data/chatrooms.json'
+import chatRoomData from './data/chatroom.json'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users = usersData['entries'],
-      chatroomData = chatroomData['entries'],
-      chatroomsData = chatroomsData['entries'],
+      users: [],
+      chatRoomData: [],
+      chatRoomsData: []
     }
+  }
+
+  componentWillMount() {
+    this.setState({
+      users: usersData['entries'],
+      chatRoomData: chatRoomData['entries'],
+      chatRoomsData: chatRoomsData['entries'],
+    })
+
+    console.log('userdara', usersData['entries'])
   }
   
   render() {
@@ -43,7 +53,10 @@ class App extends Component {
               /> 
 
               <Route exact path="/messaging" render={props => 
-                  <Messenger {...props} users={this.users} chatroomData={this.chatroomData} chatroomsData={chatroomsData}
+                  <Messenger {...props} 
+                  users={this.state.users} 
+                  chatRoomData={this.state.chatRoomData} 
+                  chatRoomsData={this.state.chatRoomsData}
                   />
                 }/>  
                 

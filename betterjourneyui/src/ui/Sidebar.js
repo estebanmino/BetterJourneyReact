@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import {Nav, NavItem} from 'react-bootstrap';
-import Icon from '../icon.PNG';
 
 class Sidebar extends Component {
   render() {

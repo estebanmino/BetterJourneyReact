@@ -108,3 +108,17 @@
 .chats-list {
   height: 90vh;
 }
+
+.chat-list-item {
+  margin: 10px;
+  background-color: #F0F5F8;
+  border: 1px #F0F5F8 solid;
+  border-radius: 10px;
+  height: 60px;
+  padding: 5px;
+}
+
+.chat-list-item img {
+  width: 40px;
+  height: 40px;
+}
